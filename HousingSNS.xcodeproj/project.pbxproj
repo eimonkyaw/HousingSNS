@@ -13,6 +13,7 @@
 		CEF426291B16DF2D00ACD995 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF426281B16DF2D00ACD995 /* Images.xcassets */; };
 		CEF4262C1B16DF2D00ACD995 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF4262A1B16DF2D00ACD995 /* LaunchScreen.xib */; };
 		CEF426381B16DF2D00ACD995 /* HousingSNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF426371B16DF2D00ACD995 /* HousingSNSTests.swift */; };
+		CEF426421B16ECDD00ACD995 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF426411B16ECDD00ACD995 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		CEF426311B16DF2D00ACD995 /* HousingSNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousingSNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF426361B16DF2D00ACD995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF426371B16DF2D00ACD995 /* HousingSNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingSNSTests.swift; sourceTree = "<group>"; };
+		CEF426411B16ECDD00ACD995 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CEF426431B16ECFA00ACD995 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF426421B16ECDD00ACD995 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		CEF426131B16DF2D00ACD995 = {
 			isa = PBXGroup;
 			children = (
+				CEF426411B16ECDD00ACD995 /* FacebookSDK.framework */,
 				CEF4261E1B16DF2D00ACD995 /* HousingSNS */,
 				CEF426341B16DF2D00ACD995 /* HousingSNSTests */,
 				CEF4261D1B16DF2D00ACD995 /* Products */,
@@ -83,6 +88,7 @@
 				CEF426281B16DF2D00ACD995 /* Images.xcassets */,
 				CEF4262A1B16DF2D00ACD995 /* LaunchScreen.xib */,
 				CEF4261F1B16DF2D00ACD995 /* Supporting Files */,
+				CEF426431B16ECFA00ACD995 /* Bridge-Header.h */,
 			);
 			path = HousingSNS;
 			sourceTree = "<group>";
@@ -338,9 +344,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/pj/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = HousingSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HousingSNS/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -348,9 +360,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/pj/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = HousingSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HousingSNS/Bridge-Header.h";
 			};
 			name = Release;
 		};
